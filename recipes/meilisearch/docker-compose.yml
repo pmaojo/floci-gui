@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  meilisearch:
+    image: getmeili/meilisearch:v1.6.0
+    ports:
+      - "${MEILI_PORT}:7700"
+    environment:
+      MEILI_MASTER_KEY: "${MEILI_MASTER_KEY}"
+      MEILI_ENV: "${MEILI_ENV}"
+      MEILI_NO_ANALYTICS: "${MEILI_NO_ANALYTICS}"
+    volumes:
+      - meili_data:/meili_data
+
+volumes:
+  meili_data:

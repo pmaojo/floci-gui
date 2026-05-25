@@ -18,6 +18,9 @@ test.describe('Software Marketplace E2E Tests', () => {
     await expect(page.locator('text=Redis Cache & Broker').first()).toBeVisible();
     await expect(page.locator('text=RabbitMQ Broker').first()).toBeVisible();
     await expect(page.locator('text=PostgreSQL Database').first()).toBeVisible();
+    await expect(page.locator('text=Grafana + Prometheus').first()).toBeVisible();
+    await expect(page.locator('text=Meilisearch').first()).toBeVisible();
+    await expect(page.locator('text=Redpanda (Kafka Compatible)').first()).toBeVisible();
 
     // Locate the "Launch App" button for Redis
     const launchButton = page.locator('button:has-text("Launch App")').first();

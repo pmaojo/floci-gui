@@ -1,0 +1,37 @@
+{
+  "id": "meilisearch",
+  "name": "Meilisearch",
+  "description": "Lightning-fast, ultra-relevant, and typo-tolerant search engine with an intuitive built-in web UI.",
+  "version": "1.6.0",
+  "accessUrl": "http://localhost:{{MEILI_PORT}}",
+  "variables": [
+    {
+      "key": "MEILI_PORT",
+      "label": "Meilisearch Port",
+      "type": "number",
+      "default": 7700,
+      "description": "Port on your host machine to bind the Meilisearch API and Web UI."
+    },
+    {
+      "key": "MEILI_MASTER_KEY",
+      "label": "Master Key",
+      "type": "password",
+      "default": "masterKey123",
+      "description": "API key required to interact with the Meilisearch instance (must be at least 16 bytes)."
+    },
+    {
+      "key": "MEILI_ENV",
+      "label": "Environment",
+      "type": "text",
+      "default": "development",
+      "description": "Environment mode. 'development' enables the built-in search preview web interface."
+    },
+    {
+      "key": "MEILI_NO_ANALYTICS",
+      "label": "Disable Analytics",
+      "type": "text",
+      "default": "true",
+      "description": "Set to true to disable telemetry and analytics sent to Meilisearch."
+    }
+  ]
+}
