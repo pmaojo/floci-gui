@@ -1,0 +1,23 @@
+{
+  "id": "redpanda",
+  "name": "Redpanda (Kafka Compatible)",
+  "description": "High-performance streaming engine compatible with Kafka API. Includes Redpanda Console for visual management of topics, consumers and messages.",
+  "version": "23.2.28 (Broker) / 2.4.5 (Console)",
+  "accessUrl": "http://localhost:{{REDPANDA_CONSOLE_PORT}}",
+  "variables": [
+    {
+      "key": "REDPANDA_KAFKA_PORT",
+      "label": "Kafka API Port",
+      "type": "number",
+      "default": 19092,
+      "description": "Port to connect your applications to the Kafka-compatible broker."
+    },
+    {
+      "key": "REDPANDA_CONSOLE_PORT",
+      "label": "Console UI Port",
+      "type": "number",
+      "default": 8080,
+      "description": "Port on your host machine to access the Redpanda Console Web UI."
+    }
+  ]
+}
